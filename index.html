@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Study Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 Student Study Planner</h1>
+        <p>Plan your studies and stay organized</p>
+    </header>
+
+    <main>
+        <section class="planner">
+            <h2>Add Study Task</h2>
+
+            <input type="text" id="taskInput" placeholder="Enter your study task">
+
+            <select id="subjectInput">
+                <option value="">Select Subject</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Physics">Physics</option>
+                <option value="English">English</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <input type="date" id="dateInput">
+
+            <button onclick="addTask()">Add Task</button>
+        </section>
+
+        <section class="tasks">
+            <h2>My Study Tasks</h2>
+
+            <ul id="taskList">
+                <li class="empty">No tasks added yet.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Student Study Planner</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
