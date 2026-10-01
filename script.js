@@ -1,64 +1,26 @@
-function addTask() {
 
-    const taskInput = document.getElementById("taskInput");
-    const subjectInput = document.getElementById("subjectInput");
-    const dateInput = document.getElementById("dateInput");
-    const taskList = document.getElementById("taskList");
+let cartCount = 0;
 
-    const task = taskInput.value;
-    const subject = subjectInput.value;
-    const date = dateInput.value;
 
-    if (task === "" || subject === "" || date === "") {
-        alert("Please fill in all fields.");
-        return;
-    }
+// Add product to cart
 
-    // Remove "No tasks" message
-    const emptyMessage = document.querySelector(".empty");
+function addToCart() {
 
-    if (emptyMessage) {
-        emptyMessage.remove();
-    }
+    cartCount++;
 
-    // Create new task
-    const li = document.createElement("li");
+    document.getElementById("cartCount").textContent = cartCount;
 
-    li.innerHTML = `
-        <div class="task-info" onclick="completeTask(this)">
-            <strong>${task}</strong><br>
-            <small>${subject} | ${date}</small>
-        </div>
-
-        <button class="delete-btn" onclick="deleteTask(this)">
-            Delete
-        </button>
-    `;
-
-    taskList.appendChild(li);
-
-    // Clear input fields
-    taskInput.value = "";
-    subjectInput.value = "";
-    dateInput.value = "";
+    alert("Product added to cart!");
 }
 
 
-// Mark task as completed
-function completeTask(element) {
-    element.parentElement.classList.toggle("completed");
-}
+// Show special offer
 
+function showOffer() {
 
-// Delete task
-function deleteTask(button) {
-    button.parentElement.remove();
-
-    const taskList = document.getElementById("taskList");
-
-    if (taskList.children.length === 0) {
-        taskList.innerHTML = `
-            <li class="empty">No tasks added yet.</li>
-        `;
-    }
+    alert(
+        "🎉 Special Offer!\n\n" +
+        "Get up to 30% OFF on selected products.\n" +
+        "Shop now and enjoy the discount!"
+    );
 }
