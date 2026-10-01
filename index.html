@@ -1,52 +1,208 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Study Planner</title>
+
+    <title>StyleNest - Fashion Store</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
-        <h1>📚 Student Study Planner</h1>
-        <p>Plan your studies and stay organized</p>
-    </header>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">StyleNest</div>
 
-    <main>
-        <section class="planner">
-            <h2>Add Study Task</h2>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
 
-            <input type="text" id="taskInput" placeholder="Enter your study task">
+        <div class="cart">
+            🛒 Cart <span id="cartCount">0</span>
+        </div>
+    </nav>
 
-            <select id="subjectInput">
-                <option value="">Select Subject</option>
-                <option value="Computer Science">Computer Science</option>
-                <option value="Mathematics">Mathematics</option>
-                <option value="Physics">Physics</option>
-                <option value="English">English</option>
-                <option value="Other">Other</option>
-            </select>
 
-            <input type="date" id="dateInput">
+    <!-- Home Section -->
+    <section class="hero" id="home">
 
-            <button onclick="addTask()">Add Task</button>
-        </section>
+        <div class="hero-text">
+            <h1>Discover Your Style</h1>
 
-        <section class="tasks">
-            <h2>My Study Tasks</h2>
+            <p>
+                Trendy fashion at affordable prices.
+                Find something perfect for every occasion.
+            </p>
 
-            <ul id="taskList">
-                <li class="empty">No tasks added yet.</li>
-            </ul>
-        </section>
-    </main>
+            <a href="#products" class="shop-btn">Shop Now</a>
+        </div>
 
+    </section>
+
+
+    <!-- Categories -->
+    <section id="categories">
+
+        <h2>Shop By Category</h2>
+
+        <div class="categories">
+
+            <div class="category">
+                <div class="category-icon">👗</div>
+                <h3>Women</h3>
+                <p>Latest women's fashion</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">👕</div>
+                <h3>Men</h3>
+                <p>Modern men's clothing</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">👟</div>
+                <h3>Footwear</h3>
+                <p>Comfortable and stylish</p>
+            </div>
+
+            <div class="category">
+                <div class="category-icon">👜</div>
+                <h3>Accessories</h3>
+                <p>Complete your look</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+    <section id="products">
+
+        <h2>Popular Products</h2>
+
+        <div class="products">
+
+            <div class="product">
+                <div class="product-image">👗</div>
+
+                <h3>Floral Dress</h3>
+
+                <p>Beautiful casual dress</p>
+
+                <h4>₹999</h4>
+
+                <button onclick="addToCart()">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">👕</div>
+
+                <h3>Classic T-Shirt</h3>
+
+                <p>Comfortable cotton T-shirt</p>
+
+                <h4>₹499</h4>
+
+                <button onclick="addToCart()">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">👖</div>
+
+                <h3>Denim Jeans</h3>
+
+                <p>Stylish regular-fit jeans</p>
+
+                <h4>₹1,299</h4>
+
+                <button onclick="addToCart()">
+                    Add to Cart
+                </button>
+            </div>
+
+
+            <div class="product">
+                <div class="product-image">👜</div>
+
+                <h3>Hand Bag</h3>
+
+                <p>Elegant everyday handbag</p>
+
+                <h4>₹799</h4>
+
+                <button onclick="addToCart()">
+                    Add to Cart
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Offer Section -->
+    <section class="offer">
+
+        <h2>Special Offer!</h2>
+
+        <p>Get up to <strong>30% OFF</strong> on selected products.</p>
+
+        <button onclick="showOffer()">
+            View Offer
+        </button>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About StyleNest</h2>
+
+        <p>
+            StyleNest is a simple online fashion store where customers
+            can explore trendy clothing, footwear and accessories
+            at affordable prices.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>Email: support@stylenest.com</p>
+        <p>Phone: +91 98765 43210</p>
+
+    </section>
+
+
+    <!-- Footer -->
     <footer>
-        <p>© 2026 Student Study Planner</p>
+
+        <p>© 2026 StyleNest. All Rights Reserved.</p>
+
     </footer>
 
+
     <script src="script.js"></script>
+
 </body>
 </html>
+```
